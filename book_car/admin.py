@@ -5,9 +5,14 @@ from .models import Car
 class CarAdmin(admin.ModelAdmin):
     list_display = ('brand', 'production_year', 'body_type')  # Wyświetlane kolumny
     list_filter = ('body_type', 'production_year')           # Filtry boczne
-    search_fields = ('brand',)                               # Pole wyszukiwania
+    search_fields = ('brand',) # Pole wyszukiwania
+
+
+
+
 
 
 from django.contrib import admin
 
 # Register your models here.
+

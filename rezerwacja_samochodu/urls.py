@@ -17,9 +17,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+
 urlpatterns = [
-    path('admin/', admin.site.urls),  # Link do panelu admina
-    # path('', include('your_app.urls')),  # Linki do innych aplikacji (opcjonalne)
+    path('admin/', admin.site.urls), #był
+    # Link do panelu admina
+    path('', include('book_car.urls')),  # Linki do innych aplikacji (opcjonalne)
 ]
 
 

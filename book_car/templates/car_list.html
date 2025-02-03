@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+{% for car in cars %}
+    <p>{{ car.brand }} ({{ car.production_year }}) - {{ car.get_body_type_display }}</p>
+    <a href="{% url 'reserve_car' car.id %}">
+        <button>Rezerwuj</button>
+    </a>
+{% endfor %}

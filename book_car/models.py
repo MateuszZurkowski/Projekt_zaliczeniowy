@@ -18,8 +18,15 @@ class Car(models.Model):
 
     def __str__(self):
         return f'{self.brand} ({self.production_year}) - {self.get_body_type_display()}'
+#new
+class Reservation(models.Model):
+    car = models.ForeignKey(Car, on_delete=models.CASCADE)
+    name = models.CharField(max_length=100)
+    email = models.EmailField()
+    reservation_date = models.DateField()
+
+    def __str__(self):
+        return f'Reservation for {self.car.brand} on {self.reservation_date}'
 
 #get_body_type_display() - jest to metoda wbudowana w Django pozwala zwrócić czytelną nazwę (np. "SUV") zamiast wartości zapisanej w bazie (np. "suv").
-from django.db import models
-
 # Create your models here.
