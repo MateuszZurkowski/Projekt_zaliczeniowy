@@ -19,7 +19,7 @@ def reserve_car(request, car_id):
             reservation = form.save(commit=False)
             reservation.car = car
             reservation.save()
-            return redirect('car_list')  # Możesz przekierować do listy samochodów
+            return redirect('car_list')
     else:
         form = ReservationForm()
 
